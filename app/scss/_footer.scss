@@ -1,0 +1,149 @@
+.footer {
+    position: relative;
+    background-color: $darkBlue;
+    text-align: center;
+   
+
+    @include breakpoint-up(medium) {
+        text-align: left;
+       }
+
+    &__logo {
+    
+            img{
+            padding-bottom: 1.187rem;
+        }
+
+        @include breakpoint-up(medium) {
+            grid-column: 1;
+            grid-row: 1;
+           }
+
+           img {
+            padding-top: 0.8rem;
+           }
+    }
+
+        &__social {
+            margin-bottom: 20px;
+
+            @include breakpoint-up(medium) {
+                grid-column: 1;
+                grid-row: 1;
+                align-self: end;
+                margin-bottom: 0px;
+               }
+
+        a {
+
+            svg path {
+                transition: fill 150ms ease-in-out;
+            }
+            &:hover svg path {
+                fill: $limeGreen;
+
+            }
+
+            &:not(:last-child) {
+            padding-right: 0.562rem;
+            }
+           
+        }
+    }
+
+        &__links {
+            
+
+                a {
+                color: $white; 
+                text-align:center;
+                padding-bottom: 0.812rem;
+                display: block;
+                transition: color 150ms ease-in-out;
+
+                &:hover, :active {
+                    color: $limeGreen;
+
+                }
+
+                @include breakpoint-up(medium) {
+                    text-align: left;
+                    padding-bottom: 1.375rem;
+                   
+                   }
+              
+            }
+
+          
+        }
+
+        .col1 {
+            
+            @include breakpoint-up(medium) {
+                grid-column: 2 / 3;
+                font-size: 0.8125rem;
+                margin-top: 0.9375rem;
+
+                a:last-child {
+                        padding-bottom: 0;
+                        }
+                }
+
+               }
+        
+
+        .col2 {
+            
+            @include breakpoint-up(medium) {
+                grid-column: 3 / 4;
+                font-size: 0.8125rem;
+                margin-top: 0.9375rem;
+
+                a:last-child {
+                    padding-bottom: 0;
+                        } 
+                }
+
+               }
+        
+       
+
+        &__cta {
+            padding-top: 0.7rem;
+            padding-bottom: 1.25rem;
+            grid-column: 4 / 5;
+            grid-row: 1;
+            justify-content: right;
+
+            @include breakpoint-up(medium) {
+            a {
+                float:right;
+            }
+            }
+        }
+
+        &__copyright {
+
+            @include breakpoint-up(medium) {
+            grid-column: 4/ 5;
+            grid-row: 1;
+            align-self: end;
+            text-align:right;
+            font-size: 0.8125rem;
+          }
+        }
+        
+}
+
+.footer--container {
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
+
+
+    @include breakpoint-up(medium) {
+    display:grid;
+   
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    }
+}
